@@ -7,7 +7,7 @@ https://docs.nginx.com/nginx-service-mesh/tutorials/trafficsplit-deployments/
 
 - Ensure that you create a new namespace, "demo" and deploy all the example files within that namespace
 
-`
+```
 kubectl create namespace demo
 
 kubectl apply -f gateway.yaml -n demo
@@ -20,7 +20,7 @@ kubectl apply -f target-v2.0-failing.yaml -n demo
 
 kubectl apply -f target-v2.1-successful.yaml -n demo
 
-`
+```
 
 After having done that, you can deploy the configurations from this repository:
 
