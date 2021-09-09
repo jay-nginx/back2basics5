@@ -49,6 +49,12 @@ Note:
 
 ### Access Control Example (Dynamic Routing - Header based)
 ```kubectl apply -f dynamic-routing.yaml -n demo```
-- 
+- Upon inspection of the above configuration file, you will see that if the header key: value of "user-id: 1" is found, requests will be routed to target v
+- ```curl <ip>:<port> -H "user-id: 1"
+- Above command would always be routed to the service 2.1
 
-
+### Monitoring / Observability
+- For monitoring and observability, we need to port-forward the Grafana & Jager services to our local machine
+- ```	kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/grafana 3000:3000&
+	    kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/jaeger 16686:16686&```   
+- After that, from you local browser, access port 3000 for Grafance & 16686 for Jager. 
