@@ -6,13 +6,14 @@ Repo for NGINX Service Mesh Demo - NGINX Back to Basics Webinar - Episode 5
 https://docs.nginx.com/nginx-service-mesh/tutorials/trafficsplit-deployments/
 
 - Ensure that you create a new namespace, "demo" and deploy all the example files within that namespace
+
 `
-kubectl create namespace demo
-kubectl apply -f gateway.yaml -n demo
-kubectl apply -f target-svc.yaml -n demo
-kubectl apply -f target-v1.0.yaml -n demo
-kubectl apply -f target-v2.0-failing.yaml -n demo
-kubectl apply -f target-v2.1-successful.yaml -n demo
+kubectl create namespace demo\n
+kubectl apply -f gateway.yaml -n demo\n
+kubectl apply -f target-svc.yaml -n demo\n
+kubectl apply -f target-v1.0.yaml -n demo\n
+kubectl apply -f target-v2.0-failing.yaml -n demo\n
+kubectl apply -f target-v2.1-successful.yaml -n demo\n
 `
 
 After having done that, you can deploy the configurations from this repository:
