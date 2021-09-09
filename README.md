@@ -9,15 +9,10 @@ https://docs.nginx.com/nginx-service-mesh/tutorials/trafficsplit-deployments/
 
 ```
 kubectl create namespace demo
-
 kubectl apply -f gateway.yaml -n demo
-
 kubectl apply -f target-svc.yaml -n demo
-
 kubectl apply -f target-v1.0.yaml -n demo
-
 kubectl apply -f target-v2.0-failing.yaml -n demo
-
 kubectl apply -f target-v2.1-successful.yaml -n demo
 
 ```
