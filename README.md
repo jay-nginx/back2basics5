@@ -47,7 +47,8 @@ Note:
 - In a seperate terminal window, you can run a loop to see the responses as below
 - ```while true; do curl <ip>:<port>; sleep 1; done```
 
-
-
+### Access Control Example (Dynamic Routing - Header based)
+```kubectl apply -f dynamic-routing.yaml -n demo```
+- 
 
 
