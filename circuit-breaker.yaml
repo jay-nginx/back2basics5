@@ -1,0 +1,15 @@
+apiVersion: specs.smi.nginx.com/v1alpha1
+kind: CircuitBreaker
+metadata:
+  name: circuit-breaker-example
+  namespace: demo
+spec:
+  destination:
+    kind: Service
+    name: target-v1-0
+    namespace: demo
+  errors: 3
+  timeoutSeconds: 30
+  fallback:
+    service: demo/target-v2-1
+    port: 80

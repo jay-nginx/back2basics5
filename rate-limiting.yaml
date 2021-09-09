@@ -1,0 +1,18 @@
+apiVersion: specs.smi.nginx.com/v1alpha1
+kind: RateLimit
+metadata:
+  name: backend-rate-limit
+  namespace: demo
+spec:
+  destination:
+    kind: Service
+    name: target-svc
+    namespace: demo
+  sources:
+  - kind: Deployment
+    name: gateway
+    namespace: demo
+  name: 10rm
+  rate: 100r/m
+  burst: 0
+  delay: nodelay
