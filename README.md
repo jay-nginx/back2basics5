@@ -49,8 +49,8 @@ Note:
 
 ### Access Control Example (Dynamic Routing - Header based)
 ```kubectl apply -f dynamic-routing.yaml -n demo```
-- Upon inspection of the above configuration file, you will see that if the header key: value of "user-id: 1" is found, requests will be routed to target v
-- ```curl <ip>:<port> -H "user-id: 1"
+- Upon inspection of the above configuration file, you will see that if the header key: value of "user-id: 1" is found, requests will be routed to target v2.1
+- ```curl <ip>:<port> -H "user-id: 1"```
 - Above command would always be routed to the service 2.1
 
 ### Monitoring / Observability
