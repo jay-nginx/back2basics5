@@ -55,6 +55,6 @@ Note:
 
 ### Monitoring / Observability
 - For monitoring and observability, we need to port-forward the Grafana & Jager services to our local machine
-- ```	kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/grafana 3000:3000&
-	    kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/jaeger 16686:16686&```   
+- ```kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/grafana 3000:3000&```
+- ```kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/jaeger 16686:16686&```   
 - After that, from you local browser, access port 3000 for Grafance & 16686 for Jager. 
